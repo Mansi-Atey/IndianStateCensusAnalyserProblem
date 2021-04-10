@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC1_IndianCensusInfoFromCSVFile
+namespace UC2_IndianStateInfoFromCSVFile
 {
-   public class CensusAnalyserException : Exception
+    public class CensusAnalyserException : Exception
     {
         public enum ExceptionType
         {

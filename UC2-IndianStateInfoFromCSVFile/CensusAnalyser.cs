@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UC1_IndianCensusInfoFromCSVFile.DTO;
+using UC2_IndianStateInfoFromCSVFile.DTO;
 
-namespace UC1_IndianCensusInfoFromCSVFile
+namespace UC2_IndianStateInfoFromCSVFile
 {
     public class CensusAnalyser
     {

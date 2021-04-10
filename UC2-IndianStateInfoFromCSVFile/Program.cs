@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace UC1_IndianCensusInfoFromCSVFile
+namespace UC2_IndianStateInfoFromCSVFile
 {
    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Indian State Census Analyser");
         }

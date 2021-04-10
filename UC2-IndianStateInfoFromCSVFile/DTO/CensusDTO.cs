@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UC1_IndianCensusInfoFromCSVFile.POCO;
+using UC2_IndianStateInfoFromCSVFile.POCO;
 
-namespace UC1_IndianCensusInfoFromCSVFile.DTO
+namespace UC2_IndianStateInfoFromCSVFile.DTO
 {
     public class CensusDTO
     {
+        public int serialNumber;
+        public string stateName;
         public string state;
+        public int tin;
+        public string stateCode;
         public long population;
         public long area;
         public long density;
@@ -16,6 +20,14 @@ namespace UC1_IndianCensusInfoFromCSVFile.DTO
         public double waterArea;
         public double landArea;
         public double housingDensity;
+
+        public CensusDTO(StateCodeDAO stateCodeDAO)
+        {
+            this.serialNumber = stateCodeDAO.serialNumber;
+            this.stateName = stateCodeDAO.stateName;
+            this.tin = stateCodeDAO.tin;
+            this.stateCode = stateCodeDAO.stateCode;
+        }
 
         public CensusDTO(CensusDataDAO censusDataDAO)
         {

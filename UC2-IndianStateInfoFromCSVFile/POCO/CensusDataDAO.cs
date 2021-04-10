@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC1_IndianCensusInfoFromCSVFile.POCO
+namespace UC2_IndianStateInfoFromCSVFile.POCO
 {
-    public class CensusDataDAO
+   public class CensusDataDAO
     {
+
         public string state;
         public long population;
         public long area;

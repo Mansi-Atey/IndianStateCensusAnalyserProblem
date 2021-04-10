@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace UC1_IndianCensusInfoFromCSVFile
+namespace UC2_IndianStateInfoFromCSVFile
 {
-    public abstract class CensusAdapter
+   public abstract class CensusAdapter
     {
         protected string[] GetCensusData(string csvfilePath, string dataHeaders)
         {

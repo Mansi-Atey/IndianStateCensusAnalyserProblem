@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UC1-IndianCensusInfoFromCSVFile\UC1-IndianCensusInfoFromCSVFile.csproj" />
+    <ProjectReference Include="..\UC2-IndianStateInfoFromCSVFile\UC2-IndianStateInfoFromCSVFile.csproj" />
   </ItemGroup>
 
 </Project>

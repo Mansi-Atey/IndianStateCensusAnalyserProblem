@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UC1_IndianCensusInfoFromCSVFile.DTO;
-using UC1_IndianCensusInfoFromCSVFile.POCO;
+using UC2_IndianStateInfoFromCSVFile.DTO;
+using UC2_IndianStateInfoFromCSVFile.POCO;
 
-namespace UC1_IndianCensusInfoFromCSVFile
+namespace UC2_IndianStateInfoFromCSVFile
 {
-   public class IndianCensusAdapter : CensusAdapter
+    public class IndianCensusAdapter : CensusAdapter
     {
         string[] censusData;
         Dictionary<string, CensusDTO> dataMap;
@@ -22,13 +22,17 @@ namespace UC1_IndianCensusInfoFromCSVFile
                     throw new CensusAnalyserException("File Contains wrong Delimeter", CensusAnalyserException.ExceptionType.INCORRECT_DELIMITER);
                 }
                 string[] column = data.Split(",");
+                if (csvfilePath.Contains("IndianStateCode.csv"))
+                {
+                    dataMap.Add(column[0], new CensusDTO(new StateCodeDAO(column[0], column[1], column[2], column[3])));
+                }
                 if (csvfilePath.Contains("IndianStateCensusData.csv"))
                 {
-                    dataMap.Add(column[0], new CensusDTO(new CensusDataDAO(column[0], column[1], column[2], column[3])));
+                    dataMap.Add(column[1], new CensusDTO(new CensusDataDAO(column[0], column[1], column[2], column[3])));
                 }
             }
             return dataMap.ToDictionary(p => p.Key, p => p.Value);
         }
+
     }
 }
-

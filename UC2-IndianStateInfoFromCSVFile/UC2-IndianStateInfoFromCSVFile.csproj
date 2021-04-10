@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>UC1_IndianCensusInfoFromCSVFile</RootNamespace>
+    <RootNamespace>UC2_IndianStateInfoFromCSVFile</RootNamespace>
   </PropertyGroup>
 
 </Project>
